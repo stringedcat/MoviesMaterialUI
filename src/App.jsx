@@ -5,8 +5,14 @@ import Home from "./components/Home/Home.jsx";
 import { Route } from "react-router-dom";
 import Movies from "./components/Movies/Movies.jsx";
 import Series from "./components/Series/Series.jsx";
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 const App = () => {
+  const history = useHistory();
   const classes = useStyles();
+  useEffect(() => {
+    history.push("/home");
+  }, []);
   return (
     <>
       <Route path="/">
@@ -16,10 +22,10 @@ const App = () => {
         <Home />
       </Route>
       <Route exact path="/movies">
-       <Movies/>
+        <Movies />
       </Route>
       <Route exact path="/series">
-       <Series/>
+        <Series />
       </Route>
       {/*       <main>
         <div className={classes.container}>
