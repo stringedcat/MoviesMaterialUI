@@ -29,7 +29,7 @@ const Appbar = () => {
         <AppBar position="relative" className={styles.AppBar}>
           <Toolbar>
             <Typography variant="h3" className={styles.typografy}>
-              DEMO Streaming
+              MOVIES AND SERIES
             </Typography>
             <Button color="inherit" className={styles.Button1}>
               Log in
